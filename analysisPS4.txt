@@ -1,0 +1,16 @@
+======= Program Design =======
+
+Note:
+All trains and cities are considered as vertices and the associations considered as edges.
+We used undirected graph and hence if there is a train between city A and city B, then we could transit packages from A to B and B to A.
+
+Datastructues involved:
+Core functionality is implemented by two classes, Vertex and Graph.
+Vertex represents a node in the graph, while Graph stores a map of all vertices names and the corresponding vertex objects.
+Vertex node has main properties called name, type (train/city) and neighbours to identify node id, type of node and its adjacent vertices.
+
+
+Design working:
+Using input data, we create a Graph g of vertices of 2 types, city and train.
+We plot the neighbours of each vertex, as we continue with data population.
+At the end of input data processing, we get a Graph g , with vertices of type city and train.

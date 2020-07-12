@@ -1,0 +1,62 @@
+---------Function showAll----------
+Total no. of freight trains: 5
+Total no. of cities: 8
+List of Freight trains:
+T1235
+T2342
+T1122
+T2341
+T5623
+List of cities:
+Chennai
+New Delhi
+Calcutta
+Ahmedabad
+Nagpur
+Mumbai
+Vishakhapatnam
+Hyderabad
+
+---------Function displayTransportHub----------
+Main transport hub: New Delhi
+Number of trains visited: 3
+List of Freight trains:
+T1235
+T2341
+T2342
+
+---------Function displayConnectedCities----------
+Freight train number: T1122
+Number of cities connected: 3
+List of cities connected directly by T1122:
+Ahmedabad
+Mumbai
+Nagpur
+
+---------Function displayConnectedCities----------
+Freight train number: T1235
+Number of cities connected: 2
+List of cities connected directly by T1235:
+Chennai
+New Delhi
+
+---------Function displayDirectTrain----------
+City A: Calcutta
+City B: New Delhi
+Package can be sent directly: Yes, T2342
+
+---------Function displayDirectTrain----------
+City A: Chennai
+City B: Hyderabad
+No direct train found between above cities
+
+---------Function findServiceAvailable----------
+City A: Calcutta
+City B: Mumbai
+Can the package be sent: Yes, Calcutta>T2342>New Delhi>T2341>Ahmedabad>T1122>Mumbai
+
+---------Function findServiceAvailable----------
+City A: Nagpur
+City B: Vishakhapatnam
+Package cannot be sent from Nagpur to Vishakhapatnam due to lack of service connecting these cities
+
