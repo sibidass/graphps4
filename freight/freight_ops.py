@@ -81,14 +81,14 @@ class Freight_Booking:
 
     def findServiceAvailable(self, a, b):
         text_section = section_header("findServiceAvailable")
-        path = self.g.find_path(a, b)  # Path finder
-        if len(path) >= 2:
+        try:
+            path = self.g.find_path(a, b)  # Path finder
+        except:
+            msg = "Package cannot be sent from {} to {} due to lack of service connecting these cities".format(a, b)
+        else:
             path_details = ">".join(path)
             msg = "Can the package be sent: Yes, " + path_details
-        else:
-            msg = "Package cannot be sent from {} to {} due to lack of service connecting these cities".format(a, b)
         text_transit_data = loaded_templates.show("d_transit", src=a, dest=b, msg=msg)
-        print(text_transit_data)
         file_writer(self.op_file, text_section, text_transit_data)
 
 def section_header(section_name):
