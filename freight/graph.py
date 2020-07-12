@@ -51,6 +51,7 @@ class Graph:
             traversing = False
             curr_vertex = vertex_list.pop()
             route_array.append(curr_vertex)
+            logging.info("Evaluating vertex {}".format(curr_vertex))
             if curr_vertex == dest:
                 return route_array
             for v in self.vertices[curr_vertex].neighbours:
@@ -61,7 +62,8 @@ class Graph:
             if not traversing:
                 route_array.pop()
         self.__clear_status()
-        return route_array
+        raise Exception("Route Not found")
+
 
     def __clear_status(self):
         for _, vertex in self.vertices.items():
